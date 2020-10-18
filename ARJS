@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AR js demo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene arjs>
+      
+<!--       <a-assets>
+        <a-asset-item id="model" src="https://delapuente.github.io/presentations/aframe-101/imgs/x-wing.obj" crossorigin /></a-asset-item>
+        <a-asset-item id="texture" src="https://delapuente.github.io/presentations/aframe-101/imgs/x-wing.mtl" crossorigin /></a-asset-item>
+      </a-assets> -->
+  
+      <a-marker preset="hiro">
+<!--         <a-entity obj-model="mtl:#texture;obj:#model" scale="0.1 0.1 0.1" position="0 0 0"></a-entity> -->
+        <a-entity id="dog"
+                  scale="1 1 1"
+                  position="0 0 0"
+                  rotation="90 180 0"
+                  json-model="src: url(https://cdn.glitch.com/824be1f9-3128-405a-a7ca-6addb26db3b2%2Fshucknew.json?1524572196947);"
+                  animation-mixer="clip: run"
+                  ></a-entity>
+      </a-marker>
+  
+    </a-scene>
+  </body>
+</html>
